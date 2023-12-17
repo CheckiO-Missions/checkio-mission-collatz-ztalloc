@@ -1,0 +1,50 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    The <a target="_blank" href="https://en.wikipedia.org/wiki/Collatz_conjecture">Collatz conjecture</a> is one of the most famous unsolved problems in mathematics. However, the Collatz sequence can also be viewed in a binary fashion depending on whether each value steps <b>up</b> (3x+1) or <b>down</b> (x/2)  from the previous value, denoting these steps with <code>"u", "d"</code>, respectively. For example, starting from n=12 here is the sequence and step shape:
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}collatz.svg" alt="example" style="max-height: 200px"/>
+</p>
+
+<p style="text-align: justify;">
+    Depending of the <code>data</code> type, you function must return the starting value (if string shape of letters <code>"u", "d"</code> is given) or shape of steps (if value is given).
+</p>
+
+<p style="text-align: justify;">
+    This function must also recognize that some shape strings are impossible as entailed by the Collatz transition rules, and correctly return None for all such shapes. You should start from the goal state 1, and perform  the given  transitions in reverse. Along  the way, you have  to ensure that your function does not accept moves that would be illegal in the original forward-going Collatz sequence. 
+</p>
+<!-- Explain input and output values -->
+<p>
+    <strong>Input:</strong> String <span translate="no">(str{% if is_js %}ing{% endif %})</span> or integer <span translate="no">({% if is_js %}number{% else %}int{% endif %})</span>.
+</p>
+
+<p>
+    <strong>Output:</strong> String <span translate="no">(str{% if is_js %}ing{% endif %})</span>, integer <span translate="no">({% if is_js %}number{% else %}int{% endif %})</span> or {% if is_js %}null{% else %}None{% endif %}. 
+</p>
+
+
+<p>
+    <strong>Examples:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>The mission was taken from Python CCPS 109. It is taught for Ryerson Chang School of Continuing Education by <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
