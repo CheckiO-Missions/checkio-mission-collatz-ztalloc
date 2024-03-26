@@ -1,0 +1,50 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    Послідовність <a target="_blank" href="https://en.wikipedia.org/wiki/Collatz_conjecture">Collatz conjecture</a> є однією з найвідоміших нерозв'язаних задач у математиці. Однак, послідовність Коллатца можна також розглядати у бінарному вигляді, залежно від того, чи кожне значення відстає на <b>up</b> (3x+1) або <b>down</b> (x/2) від попереднього значення, позначаючи ці кроки <code>"u", "d"</code>, відповідно. Наприклад, починаючи з n=12 ось послідовність і форма кроку:
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}collatz.svg" alt="example" style="max-height: 200px"/>
+</p>
+
+<p style="text-align: justify;">
+    Залежно від типу <code>data</code>, ваша функція повинна повернути початкове значення (якщо задано форму рядка з літер <code>"u", "d"</code> ) або форму кроків (якщо задано значення).
+</p>
+
+<p style="text-align: justify;">
+    Ця функція також повинна розпізнавати, що деякі форми рядків є неможливими, як це випливає з правил переходу Коллатца, і коректно повертати <span><code>{% if is_js %}null{% else %}None{% endif %}</code></span> для всіх таких фігур. Ви повинні почати з цільового стану 1 і виконати задані переходи у зворотному порядку. По дорозі ви повинні переконатися, що ваша функція не приймає ходів, які були б незаконними у вихідній послідовності Коллатца, що йде вперед. 
+</p>
+<!-- Explain input and output values -->
+<p>
+   <strong>Вхідні дані:</strong> Рядок <span>(str{% if is_js %}ing{% endif %})</span> або ціле число <span>({% if is_js %}number{% else %}int{% endif %})</span>.
+</p>
+
+<p>
+   <strong>Вивести:</strong> Рядок <span>(str{% if is_js %}ing{% endif %})</span>ціле число <span>({% if is_js %}number{% else %}int{% endif %})</span> або {% if is_js %}null{% else %}Немає{% endif %}. 
+</p>
+
+
+<p>
+    <strong>Приклади:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>Місія була взята з Python CCPS 109. Його викладають для Школи безперервної освіти Райерсона Чанга (Ryerson Chang School of Continuing Education) <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
