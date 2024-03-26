@@ -1,0 +1,50 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    <a target="_blank" href="https://en.wikipedia.org/wiki/Collatz_conjecture">Collatz conjecture</a> 是数学中最著名的未解难题之一。不过，科拉茨数列也可以用二进制的方式来看待，这取决于每个值是在前一个值的基础上步进<b>up</b> (3x+1) 还是<b>down</b> (x/2)，分别用<code>"u", "d"</code> 表示这些步进。例如，从 n=12 开始，下面是序列和步形：
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}collatz.svg" alt="example" style="max-height: 200px"/>
+</p>
+
+<p style="text-align: justify;">
+    根据<code>data</code> 类型，函数必须返回起始值（如果给出的是字符串形状的字母<code>"u", "d"</code> ）或步长形状（如果给出的是数值）。
+</p>
+
+<p style="text-align: justify;">
+    该函数还必须认识到，根据科拉茨转换规则，某些形状字符串是不可能的，因此必须正确返回 <span><code>{% if is_js %}null{% else %}None{% endif %}</code></span>返回所有此类形状。您应该从目标状态 1 开始，反向执行给定的转换。在此过程中，您必须确保您的函数不接受在最初的正向科拉兹序列中不合法的移动。 
+</p>
+<!-- Explain input and output values -->
+<p>
+   <strong>输入</strong>字符串 <span>(str{% if is_js %}ing{% endif %})</span>或整数 <span>({% if is_js %}number{% else %}int{% endif %})</span>.
+</p>
+
+<p>
+   <strong>输出：</strong>字符串 <span>(str{% if is_js %}ing{% endif %})</span>, 整数 <span>({% if is_js %}number{% else %}int{% endif %})</span>或{% if is_js %}null{% else %}无{% endif %} 。 
+</p>
+
+
+<p>
+    <strong>示例：</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>任务来自 Python CCPS 109。该课程由张瑞森继续教育学院教授。<a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
