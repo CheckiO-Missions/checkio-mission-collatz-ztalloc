@@ -1,0 +1,50 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    Le <a target="_blank" href="https://en.wikipedia.org/wiki/Collatz_conjecture">Collatz conjecture</a> est l'un des problèmes non résolus les plus célèbres des mathématiques. Cependant, la séquence de Collatz peut également être considérée de manière binaire, selon que chaque valeur s'éloigne de <b>up</b> (3x+1) ou de <b>down</b> (x/2) de la valeur précédente, en désignant ces étapes par <code>"u", "d"</code>, respectivement. Par exemple, à partir de n=12, voici la séquence et la forme des étapes:
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}collatz.svg" alt="example" style="max-height: 200px"/>
+</p>
+
+<p style="text-align: justify;">
+    Selon le type <code>data</code>, votre fonction doit renvoyer la valeur de départ (si la forme de la chaîne de lettres <code>"u", "d"</code> est donnée) ou la forme des étapes (si la valeur est donnée).
+</p>
+
+<p style="text-align: justify;">
+    Cette fonction doit également reconnaître que certaines chaînes de formes sont impossibles, conformément aux règles de transition de Collatz, et renvoyer correctement la valeur <span><code>{% if is_js %}null{% else %}None{% endif %}</code></span> pour toutes ces formes. Vous devez partir de l'état 1 et effectuer les transitions données en sens inverse. En cours de route, vous devez vous assurer que votre fonction n'accepte pas de mouvements qui seraient illégaux dans la séquence de Collatz originale. 
+</p>
+<!-- Explain input and output values -->
+<p>
+   <strong>Entrée:</strong> Chaîne <span>(str{% if is_js %}ing{% endif %})</span> ou entier <span>({% if is_js %}number{% else %}int{% endif %})</span>.
+</p>
+
+<p>
+   <strong>Sortie:</strong> Chaîne <span>(str{% if is_js %}ing{% endif %})</span>, entier <span>({% if is_js %}number{% else %}int{% endif %})</span> ou {% if is_js %}null{% else %}None{% endif %}. 
+</p>
+
+
+<p>
+    <strong>Exemples:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>La mission a été tirée de Python CCPS 109. Il est enseigné pour l'école d'éducation permanente Ryerson Chang par <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
